@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>Vanilla Weather App</title>
   </head>
@@ -20,28 +20,29 @@
       <div class="weather-app-wrapper">
         <div class="weather-app">
           <div class="overview">
-            <h1 id="city">Tokyo</h1>
+            <h1 id="city"></h1>
             <ul>
               <li>
-                <span id="date">12:00PM on Wednesday, September 21</span>
+                Last Updated
+                <span id="date"></span>
               </li>
-              <li id="description">Sunny</li>
+              <li id="description"></li>
             </ul>
           </div>
           <div class="row">
             <div class="col-6">
               <div class="d-flex weather-temperature">
-                <img src="media/sun.jpeg" alt="Sunny" id="icon" />
+                <img src="" alt="" id="icon" />
                 <div>
-                  <strong id="temperature">50</strong
+                  <strong id="temperature"></strong
                   ><span class="units"> °C | <a href="">F</a></span>
                 </div>
               </div>
             </div>
             <div class="col-6">
-              <ul>
-                <li>Humidity: <span id="humidity">50</span>%</li>
-                <li>Wind: <span id="wind">4</span> km/h</li>
+              <ul class="weatherDetails">
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>

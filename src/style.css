@@ -32,9 +32,6 @@ li {
   color: var(--grey);
   font-size: 16px;
   font-weight: 100;
-}
-
-li:first-letter {
   text-transform: capitalize;
 }
 
@@ -107,4 +104,8 @@ small {
 
 small a:hover {
   text-decoration: none;
+}
+
+.weatherDetails {
+  margin-top: 20px;
 }
