@@ -75,6 +75,7 @@ function displayTemperature(response) {
     `https://openweathermap.org/img/wn/${iconCode}@2x.png`
   );
   icon.setAttribute("alt", response.data.weather[0].description);
+  tempC = response.data.main.temp;
 }
 
 function search(city) {
@@ -89,7 +90,32 @@ function handleSubmit(event) {
   search(cityInput.value);
 }
 
-search("Los Angeles");
+function changeUnitF(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temperature");
+  let unitF = (tempC * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(unitF);
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+}
+
+function changeUnitC(event) {
+  event.preventDefault;
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = Math.round(tempC);
+  fahrenheit.classList.remove("active");
+  celsius.classList.add("active");
+}
+
+let tempC = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", changeUnitF);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", changeUnitC);
+
+search("Los Angeles");
